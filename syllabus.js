@@ -1,7 +1,85 @@
-import { lessonMetadata } from './lessons-data.js';
-
-const targetSyllabus = 'Earth Systems Analytics Syllabus 2024';
 const syllabusList = document.getElementById('syllabus-list');
+const titleEl = document.getElementById('syllabus-title');
+const summaryEl = document.getElementById('syllabus-summary');
+
+const queryParams = new URLSearchParams(window.location.search);
+const courseParam = queryParams.get('course');
+const requestedCourseId =
+  courseParam || document.body?.dataset.courseId || null;
+const DEFAULT_SUMMARY =
+  'Follow the sequence below to explore the available lessons.';
+
+async function fetchJson(path) {
+  const response = await fetch(path);
+  if (!response.ok) {
+    throw new Error(`Failed to load ${path} (${response.status})`);
+  }
+  return response.json();
+}
+
+async function loadManifest() {
+  try {
+    return await fetchJson('metadata/manifest.json');
+  } catch (error) {
+    console.warn('[syllabus] Unable to load manifest:', error);
+    return null;
+  }
+}
+
+async function loadCourse(courseId) {
+  if (!courseId) return null;
+  try {
+    return await fetchJson(`metadata/courses/${courseId}.json`);
+  } catch (error) {
+    console.error(`[syllabus] Failed to load course ${courseId}:`, error);
+    return null;
+  }
+}
+
+async function loadLessons(lessonIds = []) {
+  const uniqueIds = Array.from(new Set(lessonIds));
+  const lessons = await Promise.all(
+    uniqueIds.map(async (lessonId) => {
+      try {
+        const lesson = await fetchJson(`metadata/lessons/${lessonId}.json`);
+        return {
+          ...lesson,
+          datasetIds: Array.isArray(lesson.datasetIds)
+            ? lesson.datasetIds
+            : [],
+        };
+      } catch (error) {
+        console.error(`[syllabus] Failed to load lesson ${lessonId}:`, error);
+        return null;
+      }
+    })
+  );
+
+  return lessons.filter(Boolean);
+}
+
+function renderError(message) {
+  if (!syllabusList) return;
+  syllabusList.innerHTML = '';
+  const note = document.createElement('p');
+  note.textContent = message;
+  syllabusList.appendChild(note);
+}
+
+function applyCourseHeader(course) {
+  if (titleEl && course?.title) {
+    titleEl.textContent = course.title;
+    document.title = course.title;
+  }
+
+  if (summaryEl) {
+    if (course?.summary) {
+      summaryEl.innerHTML = course.summary;
+    } else {
+      summaryEl.textContent = DEFAULT_SUMMARY;
+    }
+  }
+}
 
 function orderLessonsBySequence(lessons) {
   if (!lessons.length) return lessons;
@@ -43,22 +121,17 @@ function createMetaPill(label, value) {
   return pill;
 }
 
-function renderSyllabus() {
+function renderLessons(lessons) {
   if (!syllabusList) return;
 
-  const lessonsForSyllabus = lessonMetadata.filter(
-    (lesson) => lesson.syllabus === targetSyllabus
-  );
+  syllabusList.innerHTML = '';
 
-  if (!lessonsForSyllabus.length) {
-    const emptyMessage = document.createElement('p');
-    emptyMessage.textContent =
-      'There are no lessons linked to this syllabus yet.';
-    syllabusList.appendChild(emptyMessage);
+  if (!lessons.length) {
+    renderError('There are no lessons linked to this course metadata yet.');
     return;
   }
 
-  const orderedLessons = orderLessonsBySequence(lessonsForSyllabus);
+  const orderedLessons = orderLessonsBySequence(lessons);
 
   orderedLessons.forEach((lesson, index) => {
     const item = document.createElement('li');
@@ -78,18 +151,20 @@ function renderSyllabus() {
     title.textContent = lesson.title;
 
     const description = document.createElement('p');
-    description.textContent = lesson.description;
+    description.textContent = lesson.description ?? 'No description supplied yet.';
+
+    const styles = Array.isArray(lesson.styles) ? lesson.styles : [];
+    const audiences = Array.isArray(lesson.audience) ? lesson.audience : [];
+    const datasetIds = Array.isArray(lesson.datasetIds) ? lesson.datasetIds : [];
 
     const meta = document.createElement('div');
     meta.className = 'syllabus-meta';
     meta.append(
-      createMetaPill('Styles', lesson.styles.join(' • ')),
-      createMetaPill('Audience', lesson.audience.join(' • ')),
+      createMetaPill('Styles', styles.join(' • ') || 'Not specified'),
+      createMetaPill('Audience', audiences.join(' • ') || 'Not specified'),
       createMetaPill(
         'Datasets',
-        lesson.datasets.length
-          ? `${lesson.datasets.length} available`
-          : 'Not supplied'
+        datasetIds.length ? `${datasetIds.length} available` : 'Not supplied'
       )
     );
 
@@ -99,4 +174,30 @@ function renderSyllabus() {
   });
 }
 
-renderSyllabus();
+async function init() {
+  if (!syllabusList) return;
+
+  const manifest = await loadManifest();
+  const fallbackCourseId = manifest?.courses?.[0] ?? null;
+  const courseId = requestedCourseId || fallbackCourseId;
+
+  if (!courseId) {
+    renderError('No course metadata available yet. Add a course JSON file to get started.');
+    return;
+  }
+
+  const course = await loadCourse(courseId);
+
+  if (!course) {
+    renderError('Unable to load the requested course metadata.');
+    return;
+  }
+
+  applyCourseHeader(course);
+
+  const lessonIds = Array.isArray(course.lessonIds) ? course.lessonIds : [];
+  const lessons = await loadLessons(lessonIds);
+  renderLessons(lessons);
+}
+
+init();

@@ -1,5 +1,3 @@
-import { buildSyllabusIndex, slugify } from './data-utils.js';
-
 const syllabusGrid = document.getElementById('syllabus-grid');
 const resultsCountEl = document.getElementById('syllabus-results-count');
 const resetButton = document.getElementById('reset-syllabus-filters');
@@ -16,12 +14,116 @@ const filterState = {
   style: new Set(),
 };
 
-const syllabi = buildSyllabusIndex();
-const filterOptions = buildFilterOptions(syllabi);
+let syllabi = [];
+let filtersInitialized = false;
+const datasetCache = new Map();
 
-renderFilterOptions(filterOptions);
-bindFilterEvents();
-renderResults(syllabi);
+async function fetchJson(path) {
+  const response = await fetch(path);
+  if (!response.ok) {
+    throw new Error(`Failed to load ${path} (${response.status})`);
+  }
+  return response.json();
+}
+
+async function loadManifest() {
+  try {
+    return await fetchJson('metadata/manifest.json');
+  } catch (error) {
+    console.error('[syllabus-explorer] Unable to load manifest:', error);
+    return null;
+  }
+}
+
+async function loadCourse(courseId) {
+  try {
+    return await fetchJson(`metadata/courses/${courseId}.json`);
+  } catch (error) {
+    console.error(`[syllabus-explorer] Failed to load course ${courseId}:`, error);
+    return null;
+  }
+}
+
+async function loadLesson(lessonId) {
+  try {
+    return await fetchJson(`metadata/lessons/${lessonId}.json`);
+  } catch (error) {
+    console.error(`[syllabus-explorer] Failed to load lesson ${lessonId}:`, error);
+    return null;
+  }
+}
+
+async function loadLessons(lessonIds = []) {
+  const uniqueIds = Array.from(new Set(lessonIds));
+  const lessons = await Promise.all(uniqueIds.map(loadLesson));
+  return lessons.filter(Boolean);
+}
+
+function getDataset(datasetId) {
+  if (!datasetId) return Promise.resolve(null);
+  if (!datasetCache.has(datasetId)) {
+    const request = fetchJson(`metadata/datasets/${datasetId}.json`).catch(
+      (error) => {
+        console.error(
+          `[syllabus-explorer] Failed to load dataset ${datasetId}:`,
+          error
+        );
+        return null;
+      }
+    );
+    datasetCache.set(datasetId, request);
+  }
+  return datasetCache.get(datasetId);
+}
+
+async function buildCourseEntry(course, lessons) {
+  const authors = new Set();
+  const institutions = new Set();
+  const audiences = new Set();
+  const styles = new Set();
+  const lengths = new Set();
+  const datasetIds = new Set();
+
+  lessons.forEach((lesson) => {
+    (lesson.authors || []).forEach((author) => {
+      if (author.name) authors.add(author.name);
+      if (author.institution) institutions.add(author.institution);
+    });
+
+    (lesson.audience || []).forEach((aud) => audiences.add(aud));
+    (lesson.styles || []).forEach((style) => styles.add(style));
+    if (lesson.length) lengths.add(lesson.length);
+    (lesson.datasetIds || []).forEach((id) => datasetIds.add(id));
+  });
+
+  const datasetRecords = await Promise.all(
+    Array.from(datasetIds).map((id) => getDataset(id))
+  );
+  const datasetNames = datasetRecords
+    .filter((record) => record && record.name)
+    .map((record) => record.name)
+    .sort((a, b) => a.localeCompare(b));
+
+  return {
+    id: course.id,
+    title: course.title,
+    summary: course.summary ?? '',
+    authors: Array.from(authors).sort((a, b) => a.localeCompare(b)),
+    institutions: Array.from(institutions).sort((a, b) => a.localeCompare(b)),
+    audiences: Array.from(audiences).sort((a, b) => a.localeCompare(b)),
+    styles: Array.from(styles).sort((a, b) => a.localeCompare(b)),
+    lengths: Array.from(lengths).sort((a, b) => a.localeCompare(b)),
+    datasetNames,
+    datasetCount: datasetNames.length,
+    lessonCount: lessons.length,
+    lessons: lessons.map((lesson) => ({
+      id: lesson.id,
+      title: lesson.title,
+      link: lesson.link || '#',
+      length: lesson.length ?? null,
+    })),
+  };
+}
 
 function buildFilterOptions(list) {
   const options = {
@@ -56,6 +158,7 @@ function renderFilterOptions(options) {
       `.filter-options[data-filter-group="${group}"]`
     );
     if (!container) return;
+    container.innerHTML = '';
 
     options[group].forEach((value) => {
       const id = `${group}-${slugify(value)}`;
@@ -78,7 +181,16 @@ function renderFilterOptions(options) {
   });
 }
 
+function slugify(value) {
+  return String(value ?? '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
 function bindFilterEvents() {
+  if (filtersInitialized) return;
+
   filterPanels.forEach((panel) => {
     panel.addEventListener('change', (event) => {
       const target = event.target;
@@ -107,6 +219,8 @@ function bindFilterEvents() {
       renderResults(syllabi);
     });
   }
+
+  filtersInitialized = true;
 }
 
 function applyFilters() {
@@ -191,7 +305,21 @@ function renderSyllabusCard(syllabus) {
     syllabus.datasetCount === 1 ? '' : 's'
   }`;
 
-  header.append(title, totals);
+  const viewLink = document.createElement('a');
+  viewLink.href = `syllabus.html?course=${encodeURIComponent(syllabus.id)}`;
+  viewLink.className = 'link-pill';
+  viewLink.textContent = 'Open Syllabus';
+
+  header.append(title, totals, viewLink);
+
+  if (syllabus.summary) {
+    const summary = document.createElement('div');
+    summary.className = 'dataset-card__value';
+    summary.innerHTML = syllabus.summary;
+    card.append(header, summary);
+  } else {
+    card.append(header);
+  }
 
   const authors = createMetaRow(
     'Curators',
@@ -217,25 +345,15 @@ function renderSyllabusCard(syllabus) {
     'Lengths',
     syllabus.lengths.length ? syllabus.lengths.join(' • ') : 'Not specified'
   );
-
   const datasets = createMetaRow(
     'Datasets',
     syllabus.datasetNames.length
       ? syllabus.datasetNames.join(' • ')
       : 'No datasets linked'
   );
-  const lessonList = renderLessonList(syllabus.lessons);
 
-  card.append(
-    header,
-    authors,
-    institutions,
-    audiences,
-    styles,
-    lengths,
-    datasets
-  );
-  card.appendChild(lessonList);
+  card.append(authors, institutions, audiences, styles, lengths, datasets);
+  card.appendChild(renderLessonList(syllabus.lessons));
   return card;
 }
 
@@ -290,3 +408,39 @@ function renderLessonList(lessons = []) {
   wrapper.appendChild(list);
   return wrapper;
 }
+
+async function init() {
+  if (!syllabusGrid) return;
+
+  const manifest = await loadManifest();
+  const courseIds = manifest?.courses ?? [];
+
+  if (!courseIds.length) {
+    if (resultsCountEl) resultsCountEl.textContent = '0 syllabi';
+    if (syllabusGrid) {
+      syllabusGrid.innerHTML = '';
+      const empty = document.createElement('p');
+      empty.textContent =
+        'No course metadata found. Add course JSON files to populate this view.';
+      syllabusGrid.appendChild(empty);
+    }
+    return;
+  }
+
+  const courses = await Promise.all(courseIds.map(loadCourse));
+  const validCourses = courses.filter(Boolean);
+
+  const entries = [];
+  for (const course of validCourses) {
+    const lessons = await loadLessons(course.lessonIds);
+    const entry = await buildCourseEntry(course, lessons);
+    entries.push(entry);
+  }
+
+  syllabi = entries.sort((a, b) => a.title.localeCompare(b.title));
+  renderFilterOptions(buildFilterOptions(syllabi));
+  bindFilterEvents();
+  renderResults(syllabi);
+}
+
+init();
