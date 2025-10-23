@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GeoLessonHub</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <nav class="site-nav">
+          <a href="dataset-explorer.html">Dataset Explorer</a>
+          <a href="lesson-explorer.html">Lesson Explorer</a>
+          <a href="lab-explorer.html">Lab Explorer</a>
+          <a href="syllabus-explorer.html">Syllabus Explorer</a>
+          <a href="index.html" aria-current="page">Lesson Catalog</a>
+          <a href="syllabus.html">Syllabus View</a>
+          <a href="datasets.html">Dataset Library</a>
+        </nav>
+        <h1>GeoLessonHub</h1>
+        <p class="lead">
+          Discover, tag, and share geoscience lessons by teaching style,
+          audience, and length — built for Earth system educators and learners.
+        </p>
+      </div>
+    </header>
+
+    <main class="container" id="lessons"></main>
+
+    <template id="lesson-card-template">
+      <article class="lesson-card">
+        <div class="lesson-tags"></div>
+        <div class="lesson-body">
+          <header>
+            <h2 class="lesson-title"></h2>
+            <p class="lesson-description"></p>
+          </header>
+          <dl class="lesson-meta">
+            <div class="meta-row">
+              <dt>Authors</dt>
+              <dd class="lesson-authors"></dd>
+            </div>
+            <div class="meta-row">
+              <dt>Syllabus</dt>
+              <dd class="lesson-syllabus"></dd>
+            </div>
+            <div class="meta-row">
+              <dt>Lesson Link</dt>
+              <dd class="lesson-link"></dd>
+            </div>
+            <div class="meta-row">
+              <dt>Datasets</dt>
+              <dd class="lesson-datasets"></dd>
+            </div>
+            <div class="meta-row">
+              <dt>Sequence</dt>
+              <dd class="lesson-sequence"></dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

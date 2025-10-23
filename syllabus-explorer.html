@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Syllabus Explorer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <nav class="site-nav">
+          <a href="dataset-explorer.html">Dataset Explorer</a>
+          <a href="lesson-explorer.html">Lesson Explorer</a>
+          <a href="lab-explorer.html">Lab Explorer</a>
+          <a href="syllabus-explorer.html" aria-current="page"
+            >Syllabus Explorer</a
+          >
+          <a href="index.html">Lesson Catalog</a>
+          <a href="syllabus.html">Syllabus View</a>
+          <a href="datasets.html">Dataset Library</a>
+        </nav>
+        <h1>Syllabus Explorer</h1>
+        <p class="lead">
+          Compare Earth science syllabi by curator, audience, and teaching
+          styles to find the perfect fit for your program.
+        </p>
+      </div>
+    </header>
+
+    <main class="container explorer-layout">
+      <aside class="filter-panel" aria-label="Syllabus Filters">
+        <div class="filter-section">
+          <h2>Instructor</h2>
+          <div class="filter-options" data-filter-group="instructor"></div>
+        </div>
+        <div class="filter-section">
+          <h2>Institution</h2>
+          <div class="filter-options" data-filter-group="institution"></div>
+        </div>
+        <div class="filter-section">
+          <h2>Audience</h2>
+          <div class="filter-options" data-filter-group="audience"></div>
+        </div>
+        <div class="filter-section">
+          <h2>Styles</h2>
+          <div class="filter-options" data-filter-group="style"></div>
+        </div>
+        <button type="button" class="reset-button" id="reset-syllabus-filters">
+          Reset Filters
+        </button>
+      </aside>
+
+      <section class="dataset-results">
+        <header class="results-header">
+          <h2>Matching Syllabi</h2>
+          <span class="results-count" id="syllabus-results-count"></span>
+        </header>
+        <div class="dataset-grid" id="syllabus-grid"></div>
+      </section>
+    </main>
+
+    <script src="syllabus-explorer.js" type="module"></script>
+  </body>
+</html>

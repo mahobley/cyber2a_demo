@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dataset Explorer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <nav class="site-nav">
+          <a href="dataset-explorer.html" aria-current="page"
+            >Dataset Explorer</a
+          >
+          <a href="lesson-explorer.html">Lesson Explorer</a>
+          <a href="lab-explorer.html">Lab Explorer</a>
+          <a href="syllabus-explorer.html">Syllabus Explorer</a>
+          <a href="index.html">Lesson Catalog</a>
+          <a href="syllabus.html">Syllabus View</a>
+          <a href="datasets.html">Dataset Library</a>
+        </nav>
+        <h1>Dataset Explorer</h1>
+        <p class="lead">
+          Filter Earth science datasets by size, data type, and teaching topics
+          to quickly find the right fit for your field or classroom plan.
+        </p>
+      </div>
+    </header>
+
+    <main class="container explorer-layout">
+      <aside class="filter-panel" aria-label="Dataset Filters">
+        <div class="filter-section" id="size-filter">
+          <h2>Size Category</h2>
+          <div class="filter-options" data-filter-group="size"></div>
+        </div>
+        <div class="filter-section" id="datatype-filter">
+          <h2>Data Type</h2>
+          <div class="filter-options" data-filter-group="datatype"></div>
+        </div>
+        <div class="filter-section" id="topic-filter">
+          <h2>Topics</h2>
+          <div class="filter-options" data-filter-group="topic"></div>
+        </div>
+        <button type="button" class="reset-button" id="reset-filters">
+          Reset Filters
+        </button>
+      </aside>
+
+      <section class="dataset-results">
+        <header class="results-header">
+          <h2>Matching Datasets</h2>
+          <span class="results-count" id="results-count"></span>
+        </header>
+        <div class="dataset-grid" id="filtered-dataset-grid"></div>
+      </section>
+    </main>
+
+    <script src="dataset-explorer.js" type="module"></script>
+  </body>
+</html>

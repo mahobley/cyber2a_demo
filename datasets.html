@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dataset Library</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <nav class="site-nav">
+          <a href="dataset-explorer.html">Dataset Explorer</a>
+          <a href="lesson-explorer.html">Lesson Explorer</a>
+          <a href="lab-explorer.html">Lab Explorer</a>
+          <a href="syllabus-explorer.html">Syllabus Explorer</a>
+          <a href="index.html">Lesson Catalog</a>
+          <a href="syllabus.html">Syllabus View</a>
+          <a href="datasets.html" aria-current="page">Dataset Library</a>
+        </nav>
+        <h1>Dataset Library</h1>
+        <p class="lead">
+          Curated geoscience datasets linked to lessons, with guidance on
+          domains, teaching applications, and how to cite the creators.
+        </p>
+      </div>
+    </header>
+
+    <main class="container dataset-container">
+      <section class="dataset-intro">
+        <h2>Teaching-Ready Resources</h2>
+        <p>
+          Explore the data resources referenced across the Earth systems
+          curriculum. Each card surfaces the domain focus, analytical methods it
+          supports, and attribution details so you can introduce them
+          responsibly.
+        </p>
+      </section>
+
+      <div class="dataset-grid" id="dataset-grid"></div>
+    </main>
+
+    <script src="datasets.js" type="module"></script>
+  </body>
+</html>

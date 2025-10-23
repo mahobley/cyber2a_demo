@@ -1,0 +1,550 @@
+:root {
+  color-scheme: light;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #f6f8fa;
+  color: #212529;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  width: min(960px, 92vw);
+  margin: 0 auto;
+}
+
+.site-header {
+  background: radial-gradient(circle at top left, #f0f6ff, #e9ecf5 60%, #dfe3ef);
+  padding: 3.5rem 0 2.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.site-nav {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+}
+
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  background-color: rgba(79, 70, 229, 0.08);
+  color: #1a2a4a;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.site-nav a[aria-current='page'] {
+  background-color: rgba(79, 70, 229, 0.18);
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  background-color: rgba(79, 70, 229, 0.24);
+  color: #201f74;
+}
+
+.site-header h1 {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  margin: 0 0 0.5rem;
+  color: #1a2a4a;
+}
+
+.lead {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(24, 33, 54, 0.8);
+  max-width: 52ch;
+}
+
+.lesson-card {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.75rem;
+  margin: 2rem 0;
+  border-radius: 16px;
+  background-color: #ffffff;
+  border: 1px solid rgba(16, 24, 40, 0.06);
+  box-shadow: 0 15px 35px -20px rgba(16, 24, 40, 0.3);
+}
+
+.lesson-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  background-color: #e6eeff;
+  color: #1a2a4a;
+}
+
+.tag.style {
+  background: rgba(79, 70, 229, 0.12);
+  color: #3d36c0;
+}
+
+.tag.audience {
+  background: rgba(16, 185, 129, 0.12);
+  color: #0f9e70;
+}
+
+.tag.length {
+  background: rgba(248, 113, 113, 0.12);
+  color: #c2413a;
+}
+
+.tag.dataset {
+  background: rgba(234, 179, 8, 0.16);
+  color: #a16207;
+}
+
+.lesson-title {
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+  margin: 0 0 0.5rem;
+  color: #1a2a4a;
+}
+
+.lesson-description {
+  margin: 0;
+  color: rgba(33, 37, 41, 0.78);
+}
+
+.lesson-meta {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.5rem 0 0;
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.meta-row dt {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: rgba(55, 65, 81, 0.8);
+}
+
+.meta-row dd {
+  flex: 1 1 240px;
+  margin: 0;
+}
+
+.lesson-variants {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.lesson-meta-lead {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: rgba(33, 37, 41, 0.78);
+}
+
+.lesson-variant-list {
+  margin: 0.2rem 0 0;
+  padding-left: 1.1rem;
+  color: rgba(33, 37, 41, 0.85);
+}
+
+.lesson-variant-list li {
+  margin: 0.2rem 0;
+}
+
+.inline-link {
+  color: #1a2a4a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.inline-link:hover,
+.inline-link:focus {
+  text-decoration: underline;
+}
+
+.lesson-adapted-note {
+  margin: 0;
+  color: rgba(33, 37, 41, 0.85);
+}
+
+.link-pill {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 500;
+  background-color: rgba(79, 70, 229, 0.08);
+  color: #1a2a4a;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.link-pill:hover,
+.link-pill:focus {
+  background-color: rgba(79, 70, 229, 0.16);
+}
+
+.dataset-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.dataset-list a {
+  text-decoration: none;
+  padding: 0.3rem 0.75rem;
+  border-radius: 10px;
+  background-color: rgba(14, 165, 233, 0.12);
+  color: #075985;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.dataset-list a:hover,
+.dataset-list a:focus {
+  background-color: rgba(14, 165, 233, 0.2);
+}
+
+.dataset-container {
+  padding: 3rem 0 4rem;
+}
+
+.explorer-layout {
+  padding: 3rem 0 4rem;
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: minmax(220px, 260px) 1fr;
+  align-items: start;
+}
+
+.filter-panel {
+  position: sticky;
+  top: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background-color: #ffffff;
+  border: 1px solid rgba(16, 24, 40, 0.06);
+  box-shadow: 0 15px 32px -22px rgba(16, 24, 40, 0.35);
+}
+
+.filter-section h2 {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(33, 37, 41, 0.7);
+}
+
+.filter-options {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.filter-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: rgba(33, 37, 41, 0.85);
+  cursor: pointer;
+}
+
+.filter-option input[type='checkbox'] {
+  accent-color: #4f46e5;
+}
+
+.reset-button {
+  border: none;
+  background-color: rgba(79, 70, 229, 0.14);
+  color: #201f74;
+  font-weight: 600;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.reset-button:hover,
+.reset-button:focus {
+  background-color: rgba(79, 70, 229, 0.22);
+}
+
+.dataset-results {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.results-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.results-header h2 {
+  margin: 0;
+  color: #1a2a4a;
+}
+
+.results-count {
+  font-size: 0.95rem;
+  color: rgba(33, 37, 41, 0.7);
+}
+
+.dataset-intro {
+  margin-bottom: 2rem;
+  max-width: 60ch;
+  color: rgba(33, 37, 41, 0.78);
+}
+
+.dataset-intro h2 {
+  margin: 0 0 0.5rem;
+  color: #1a2a4a;
+}
+
+.dataset-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.dataset-card {
+  padding: 1.75rem;
+  border-radius: 16px;
+  background-color: #ffffff;
+  border: 1px solid rgba(16, 24, 40, 0.06);
+  box-shadow: 0 15px 32px -22px rgba(16, 24, 40, 0.35);
+  display: grid;
+  gap: 1rem;
+}
+
+.dataset-card__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.dataset-card__header h3 {
+  margin: 0;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  color: #1a2a4a;
+}
+
+.dataset-card__row {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.dataset-card__label {
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(55, 65, 81, 0.75);
+}
+
+.dataset-card__value {
+  font-size: 0.95rem;
+  color: rgba(33, 37, 41, 0.85);
+}
+
+.dataset-card__lessons {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.dataset-card__lesson-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.dataset-card__lesson-list a {
+  text-decoration: none;
+  color: #1a2a4a;
+  font-weight: 600;
+}
+
+.dataset-card__lesson-list a:hover,
+.dataset-card__lesson-list a:focus {
+  text-decoration: underline;
+}
+
+.syllabus-container {
+  padding: 3rem 0 4rem;
+}
+
+.syllabus-overview {
+  margin-bottom: 2rem;
+  max-width: 60ch;
+}
+
+.syllabus-overview h2 {
+  margin: 0 0 0.5rem;
+  color: #1a2a4a;
+}
+
+.syllabus-overview p {
+  margin: 0;
+  color: rgba(33, 37, 41, 0.75);
+}
+
+.syllabus-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.syllabus-item {
+  margin: 0;
+}
+
+.syllabus-link {
+  display: block;
+  text-decoration: none;
+  padding: 1.75rem;
+  border-radius: 16px;
+  background-color: #ffffff;
+  border: 1px solid rgba(16, 24, 40, 0.06);
+  box-shadow: 0 15px 30px -22px rgba(16, 24, 40, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: inherit;
+}
+
+.syllabus-link:hover,
+.syllabus-link:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 32px -18px rgba(16, 24, 40, 0.4);
+}
+
+.syllabus-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  background-color: rgba(16, 24, 40, 0.08);
+  color: #1a2a4a;
+}
+
+.syllabus-link h3 {
+  margin: 0.65rem 0 0.35rem;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  color: #1a2a4a;
+}
+
+.syllabus-link p {
+  margin: 0 0 1.1rem;
+  color: rgba(33, 37, 41, 0.78);
+}
+
+.syllabus-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.syllabus-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 12px;
+  background-color: rgba(79, 70, 229, 0.12);
+  color: #201f74;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.syllabus-pill strong {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 600px) {
+  .lesson-card {
+    padding: 1.25rem;
+  }
+
+  .meta-row {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .meta-row dd {
+    flex: 1 1 auto;
+  }
+
+  .syllabus-link {
+    padding: 1.25rem;
+  }
+
+  .syllabus-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dataset-card {
+    padding: 1.25rem;
+  }
+
+  .dataset-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .explorer-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-panel {
+    position: static;
+  }
+
+  .results-header {
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: flex-start;
+  }
+}
