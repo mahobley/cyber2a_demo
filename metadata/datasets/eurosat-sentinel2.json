@@ -1,0 +1,24 @@
+{
+  "id": "eurosat-sentinel2",
+  "name": "EuroSAT Sentinel-2 Land Cover",
+  "url": "https://www.kaggle.com/datasets/apollo2506/eurosat-dataset",
+  "domain": "Remote Sensing",
+  "methods": [
+    "Image Classification",
+    "Semantic Segmentation",
+    "Transfer Learning"
+  ],
+  "size": "27,000 multi-spectral tiles | 12 bands",
+  "citation": "Helber, P., Bischke, B., Helber, L., & Meinel, G. (2019). EuroSAT: A Novel Dataset and Deep Learning Benchmark for Land Use and Land Cover Classification.",
+  "sizeCategory": "Large",
+  "dataTypes": [
+    "Multispectral Imagery",
+    "GeoTIFF",
+    "JPEG"
+  ],
+  "topics": [
+    "Land Cover Mapping",
+    "Earth Observation",
+    "Agricultural Monitoring"
+  ]
+}

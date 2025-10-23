@@ -1,0 +1,43 @@
+{
+  "id": "geo-module-03",
+  "title": "Watershed Resilience Scenario Planning",
+  "description": "Capstone studio where teams evaluate flood mitigation strategies under future climate projections and land-use change.",
+  "styles": [
+    "Active Learning",
+    "Lecture"
+  ],
+  "audience": [
+    "Graduate Students"
+  ],
+  "length": "Unit",
+  "link": "https://example.com/watershed-resilience-studio",
+  "authors": [
+    {
+      "name": "Prof. Liam Ortega",
+      "institution": "Coastal Climate Laboratory"
+    }
+  ],
+  "courseId": "earth-systems-analytics-2024",
+  "navigation": {
+    "previous": "geo-module-02",
+    "next": null
+  },
+  "taughtCount": 3,
+  "modifiedBy": [
+    {
+      "title": "Coastal Flood Resilience Workshop",
+      "curator": "Dr. Amina Patel",
+      "institution": "Arctic Systems Lab",
+      "link": "https://example.com/lessons/coastal-flood-resilience"
+    }
+  ],
+  "adaptedFrom": {
+    "title": "NOAA Watershed Adaptation Toolkit",
+    "link": "https://example.com/original/noaa-watershed-toolkit",
+    "author": "NOAA Climate Program"
+  },
+  "datasetIds": [
+    "river-discharge-archive",
+    "land-use-change-projections"
+  ]
+}

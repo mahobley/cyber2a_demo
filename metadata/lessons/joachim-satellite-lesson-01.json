@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lesson-01",
+  "title": "Advanced Segmentation Concepts with EuroSAT",
+  "description": "Deepen understanding of semantic segmentation by comparing encoder–decoder architectures and attention mechanisms tailored to EuroSAT scenes.",
+  "styles": ["Seminar", "Technical Talk"],
+  "audience": ["Graduate Students", "Research Fellows", "Machine Learning Practitioners"],
+  "length": "Module",
+  "link": "https://arxiv.org/abs/1606.00915",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": null,
+    "next": "joachim-satellite-lab-01"
+  },
+  "taughtCount": 2,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "Semantic Segmentation with Deep Learning",
+    "link": "https://paperswithcode.com/task/semantic-segmentation",
+    "author": "Research Community"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

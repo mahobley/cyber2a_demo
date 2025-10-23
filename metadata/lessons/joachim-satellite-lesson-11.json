@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lesson-11",
+  "title": "Cross-Dataset Generalization",
+  "description": "Study techniques for blending EuroSAT with DeepGlobe and Dubai datasets to improve generalization across geographies.",
+  "styles": ["Lecture", "Case Study"],
+  "audience": ["Graduate Students", "Researchers"],
+  "length": "Module",
+  "link": "https://example.com/joachim/eurosat-cross-dataset",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lab-10",
+    "next": "joachim-satellite-lab-11"
+  },
+  "taughtCount": 0,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "DeepGlobe Challenge",
+    "link": "https://deepglobe.org/",
+    "author": "DeepGlobe"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

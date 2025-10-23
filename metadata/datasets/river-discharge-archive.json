@@ -1,0 +1,21 @@
+{
+  "id": "river-discharge-archive",
+  "name": "River Discharge Archive",
+  "url": "https://example.com/datasets/river-discharge",
+  "domain": "Hydrology",
+  "methods": [
+    "Time Series Analysis",
+    "Extreme Value Modeling"
+  ],
+  "size": "Daily discharge (1980-2023) | 600 MB",
+  "citation": "National Hydrologic Observatory (2024). River Discharge Archive.",
+  "sizeCategory": "Medium",
+  "dataTypes": [
+    "Time Series",
+    "CSV"
+  ],
+  "topics": [
+    "Hydrologic Modeling",
+    "Flood Risk"
+  ]
+}

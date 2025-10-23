@@ -1,0 +1,39 @@
+{
+  "id": "satellite-lesson-02",
+  "title": "Building a Segmentation Model with Keras",
+  "description": "This lesson guides students through implementing a U-Net-based segmentation model in Keras. It includes dataset preparation using EuroSAT imagery, model construction, training, and visualization of predictions. Students learn to evaluate segmentation quality and interpret visual outputs for different land-cover types.",
+  "styles": ["Workshop", "Code Lab"],
+  "audience": ["Graduate Students", "Undergraduate Students", "Machine Learning Practitioners"],
+  "length": "Module",
+  "link": "https://pyimagesearch.com/2022/02/21/u-net-image-segmentation-in-keras/",
+  "authors": [
+    {
+      "name": "Dr. Sofia Rahman",
+      "institution": "Geospatial Data Science Lab"
+    },
+    {
+      "name": "Prof. Liam Ortega",
+      "institution": "Coastal Climate Laboratory"
+    }
+  ],
+  "courseId": "sat-keras-eurosat",
+  "navigation": {
+    "previous": "satellite-lesson-01",
+    "next": "satellite-lesson-03"
+  },
+  "taughtCount": 3,
+  "modifiedBy": [
+    {
+      "title": "U-Net Image Segmentation in Keras (PyImageSearch Tutorial)",
+      "curator": "Adrian Rosebrock",
+      "institution": "PyImageSearch",
+      "link": "https://pyimagesearch.com/2022/02/21/u-net-image-segmentation-in-keras/"
+    }
+  ],
+  "adaptedFrom": {
+    "title": "EuroSAT CNN Image Classification",
+    "link": "https://www.kaggle.com/code/rkuo2000/eurosat-cnn/notebook#Test-Model",
+    "author": "Kaggle Community Contributors"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

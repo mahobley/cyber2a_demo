@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lab-07",
+  "title": "Lab 7: Edge Deployment Pipeline",
+  "description": "Convert Keras EuroSAT models to TensorFlow Lite and ONNX, then validate accuracy and latency on edge simulators.",
+  "styles": ["Lab", "DevOps"],
+  "audience": ["Graduate Students", "Engineers"],
+  "length": "Lab",
+  "link": "https://example.com/joachim/eurosat-lab-07",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lesson-07",
+    "next": "joachim-satellite-lesson-08"
+  },
+  "taughtCount": 0,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "Edge Deployment for Remote Sensing",
+    "link": "https://developer.nvidia.com/blog",
+    "author": "NVIDIA Developers"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

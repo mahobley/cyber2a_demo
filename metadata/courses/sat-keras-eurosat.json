@@ -1,0 +1,13 @@
+{
+  "id": "sat-keras-eurosat",
+  "title": "Satellite Image Classification and Segmentation with Keras and EuroSAT",
+  "summary": "<p>An applied sequence that walks through Keras-based classification and segmentation workflows with the EuroSAT Sentinel-2 dataset.</p><ul><li>Review core semantic-segmentation concepts and architectures.</li><li>Implement training-ready preprocessing and augmentation pipelines.</li><li>Build and evaluate U-Net style models with Keras.</li><li>Interpret land-cover predictions for real-world decision making.</li></ul>",
+  "coordinators": [
+    {
+      "name": "Dr Example",
+      "institution": "The Ohio State University",
+      "role": "Lead Curator"
+    }
+  ],
+  "lessonIds": ["satellite-lesson-01", "satellite-lesson-02", "joachim-satellite-lesson-03"]
+}

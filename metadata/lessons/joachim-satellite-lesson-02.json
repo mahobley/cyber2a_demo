@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lesson-02",
+  "title": "Designing Transfer-Learning Pipelines in Keras",
+  "description": "Build consistent data preparation, checkpoint selection, and fine-tuning workflows for EuroSAT segmentation models using Keras and TensorFlow.",
+  "styles": ["Workshop", "Code Walkthrough"],
+  "audience": ["Graduate Students", "Research Fellows", "Machine Learning Practitioners"],
+  "length": "Module",
+  "link": "https://keras.io/examples/vision/semantic_segmentation/",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lab-01",
+    "next": "joachim-satellite-lab-02"
+  },
+  "taughtCount": 2,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "Transfer Learning for Semantic Segmentation",
+    "link": "https://keras.io/examples/vision/semantic_segmentation/",
+    "author": "Keras Team"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

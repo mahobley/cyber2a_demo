@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lesson-04",
+  "title": "Optimizing Augmentation Pipelines",
+  "description": "Survey advanced augmentation schedules including RandAugment, CutMix, and spectral jitter tuned for multi-band satellite imagery.",
+  "styles": ["Lecture", "Case Study"],
+  "audience": ["Graduate Students", "Research Fellows"],
+  "length": "Module",
+  "link": "https://example.com/joachim/eurosat-augmentation",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lab-03",
+    "next": "joachim-satellite-lab-04"
+  },
+  "taughtCount": 1,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "RandAugment for Satellite Imagery",
+    "link": "https://arxiv.org/abs/1909.13719",
+    "author": "Cubuk et al."
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

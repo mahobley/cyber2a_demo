@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lab-04",
+  "title": "Lab 4: Augmentation Benchmark Suite",
+  "description": "Implement configurable augmentation pipelines and benchmark their impact on EuroSAT validation metrics.",
+  "styles": ["Lab", "Experiment"],
+  "audience": ["Graduate Students", "Machine Learning Practitioners"],
+  "length": "Lab",
+  "link": "https://example.com/joachim/eurosat-lab-04",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lesson-04",
+    "next": "joachim-satellite-lesson-05"
+  },
+  "taughtCount": 1,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "Albumentations for Remote Sensing",
+    "link": "https://albumentations.ai/docs/",
+    "author": "Albumentations Team"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

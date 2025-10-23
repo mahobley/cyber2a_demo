@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lab-06",
+  "title": "Lab 6: Temporal Fusion Experiments",
+  "description": "Construct temporal fusion models combining consecutive EuroSAT acquisitions and measure improvements on change hotspots.",
+  "styles": ["Lab", "Experiment"],
+  "audience": ["Graduate Students", "Researchers"],
+  "length": "Lab",
+  "link": "https://example.com/joachim/eurosat-lab-06",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lesson-06",
+    "next": "joachim-satellite-lesson-07"
+  },
+  "taughtCount": 0,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "Temporal Segmentation Tutorials",
+    "link": "https://github.com/robmarkcole/satellite-image-deep-learning",
+    "author": "Satellite Image DL"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

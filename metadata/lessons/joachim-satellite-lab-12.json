@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lab-12",
+  "title": "Lab 12: Capstone Delivery Sprint",
+  "description": "Teams finalize EuroSAT segmentation deliverables, packaging notebooks, dashboards, and deployment artifacts.",
+  "styles": ["Lab", "Project"],
+  "audience": ["Graduate Students", "Stakeholders"],
+  "length": "Lab",
+  "link": "https://example.com/joachim/eurosat-lab-12",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lesson-12",
+    "next": null
+  },
+  "taughtCount": 0,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "ML Project Delivery Checklist",
+    "link": "https://ml-ops.org/content/mlops",
+    "author": "MLOps Community"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

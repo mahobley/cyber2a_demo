@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lab-08",
+  "title": "Lab 8: Human-in-the-Loop Labeling Simulation",
+  "description": "Simulate labeling rounds with model uncertainty to estimate annotation savings for EuroSAT segmentation.",
+  "styles": ["Lab", "Simulation"],
+  "audience": ["Graduate Students", "Labeling Leads"],
+  "length": "Lab",
+  "link": "https://example.com/joachim/eurosat-lab-08",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lesson-08",
+    "next": "joachim-satellite-lesson-09"
+  },
+  "taughtCount": 0,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "Active Learning Simulation Toolkit",
+    "link": "https://github.com/modAL-python/modAL",
+    "author": "modAL Contributors"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

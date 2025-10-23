@@ -1,0 +1,21 @@
+{
+  "id": "land-use-change-projections",
+  "name": "Land Use Change Projections",
+  "url": "https://example.com/datasets/land-use-projections",
+  "domain": "Landscape Dynamics",
+  "methods": [
+    "Scenario Modeling",
+    "Spatial Simulation"
+  ],
+  "size": "Scenario rasters (2050 & 2080) | 4.5 GB",
+  "citation": "Ortega, L. & Singh, A. (2024). Coastal Watershed Land Use Projections.",
+  "sizeCategory": "Medium",
+  "dataTypes": [
+    "Raster Grids",
+    "GeoTIFF"
+  ],
+  "topics": [
+    "Land Use Planning",
+    "Climate Adaptation"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lesson-05",
+  "title": "Multi-Spectral Feature Engineering",
+  "description": "Explore band math, vegetation indices, and texture features to enrich EuroSAT model inputs beyond raw reflectance.",
+  "styles": ["Lecture", "Demo"],
+  "audience": ["Graduate Students", "Remote Sensing Analysts"],
+  "length": "Module",
+  "link": "https://example.com/joachim/eurosat-feature-engineering",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lab-04",
+    "next": "joachim-satellite-lab-05"
+  },
+  "taughtCount": 1,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "Sentinel-2 Spectral Indices",
+    "link": "https://sentinels.copernicus.eu/web/sentinel/user-guides/sentinel-2-msi",
+    "author": "Copernicus"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "sentinel2-surface-reflectance",
+  "name": "Sentinel-2 Surface Reflectance Tiles",
+  "url": "https://example.com/datasets/sentinel2-reflectance",
+  "domain": "Remote Sensing",
+  "methods": [
+    "Image Classification",
+    "Spectral Indexing"
+  ],
+  "size": "50 tiles (10m resolution) | 28 GB",
+  "citation": "European Space Agency (2024). Sentinel-2 L2A Surface Reflectance (custom region subset).",
+  "sizeCategory": "Large",
+  "dataTypes": [
+    "Multispectral Imagery",
+    "GeoTIFF"
+  ],
+  "topics": [
+    "Vegetation Analysis",
+    "Land Cover Mapping"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lesson-09",
+  "title": "Quality Assurance and Monitoring",
+  "description": "Define QA frameworks, acceptance criteria, and monitoring signals for EuroSAT segmentation services in production.",
+  "styles": ["Lecture", "Process"] ,
+  "audience": ["Graduate Students", "Product Teams"],
+  "length": "Module",
+  "link": "https://example.com/joachim/eurosat-qa",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lab-08",
+    "next": "joachim-satellite-lab-09"
+  },
+  "taughtCount": 0,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "Monitoring ML Systems",
+    "link": "https://mlsys.withgoogle.com/presentations/monitoring",
+    "author": "Google ML Ops"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

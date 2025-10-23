@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Course Metadata Builder</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <nav class="site-nav">
+          <a href="dataset-explorer.html">Dataset Explorer</a>
+          <a href="lesson-explorer.html">Lesson Explorer</a>
+          <a href="lab-explorer.html">Lab Explorer</a>
+          <a href="syllabus-explorer.html">Syllabus Explorer</a>
+          <a href="index.html">Lesson Catalog</a>
+          <a href="syllabus.html">Syllabus View</a>
+          <a href="datasets.html">Dataset Library</a>
+          <a href="course-builder.html" aria-current="page">Course Builder</a>
+        </nav>
+        <h1>Course Metadata Builder</h1>
+        <p class="lead">
+          Fill in the form to generate a new course metadata JSON file with the
+          required and optional fields used by this project.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="content-card">
+        <h2>Course Details</h2>
+        <form id="course-builder-form" class="form-grid" novalidate>
+          <div class="form-field">
+            <label for="course-id">Course ID<span class="required-indicator">*</span></label>
+            <input
+              id="course-id"
+              name="id"
+              type="text"
+              placeholder="earth-systems-analytics-2025"
+              required
+            />
+            <p class="field-help">
+              Use a URL-safe slug. This becomes the filename and JSON <code>id</code>.
+            </p>
+          </div>
+
+          <div class="form-field">
+            <label for="course-title">Title<span class="required-indicator">*</span></label>
+            <input
+              id="course-title"
+              name="title"
+              type="text"
+              placeholder="Earth Systems Analytics Syllabus 2025"
+              required
+            />
+          </div>
+
+          <div class="form-field form-field--full">
+            <label for="course-summary">Summary</label>
+            <textarea
+              id="course-summary"
+              name="summary"
+              rows="3"
+              placeholder="Describe the purpose and focus for this course or syllabus."
+            >Curated to guide learners through climate resilience, hydrologic modeling, and landscape analytics.</textarea>
+            <p class="field-help">
+              Optional. Defaults to the text shown above if left untouched.
+            </p>
+          </div>
+
+          <fieldset class="form-field form-field--full" id="coordinator-fieldset">
+            <legend>Coordinators<span class="required-indicator">*</span></legend>
+            <p class="field-help">
+              At least one coordinator is required. Add more rows as needed.
+            </p>
+            <div class="coordinator-row" data-coordinator-row>
+              <div>
+                <label for="coordinator-name-1">Name<span class="required-indicator">*</span></label>
+                <input
+                  id="coordinator-name-1"
+                  name="coordinator-name"
+                  type="text"
+                  placeholder="Dr. Amara Singh"
+                  required
+                />
+              </div>
+              <div>
+                <label for="coordinator-institution-1">Institution</label>
+                <input
+                  id="coordinator-institution-1"
+                  name="coordinator-institution"
+                  type="text"
+                  placeholder="Center for Earth System Science"
+                  value="Center for Earth System Science"
+                />
+              </div>
+              <div>
+                <label for="coordinator-role-1">Role</label>
+                <input
+                  id="coordinator-role-1"
+                  name="coordinator-role"
+                  type="text"
+                  value="Lead Curator"
+                />
+              </div>
+              <button type="button" class="inline-remove" data-remove-row aria-label="Remove coordinator">×</button>
+            </div>
+            <button type="button" class="link-pill" id="add-coordinator">
+              + Add another coordinator
+            </button>
+          </fieldset>
+
+          <div class="form-field form-field--full">
+            <label for="course-lessons">Lesson IDs</label>
+            <textarea
+              id="course-lessons"
+              name="lessonIds"
+              rows="3"
+              placeholder="geo-module-04\ngeo-module-05"
+            ></textarea>
+            <p class="field-help">
+              Optional. Enter one lesson id per line. Empty lines are ignored.
+            </p>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="link-pill">Generate JSON</button>
+            <button type="button" class="link-pill secondary" id="copy-json" disabled>
+              Copy JSON to clipboard
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="content-card">
+        <h2>Generated JSON</h2>
+        <textarea
+          id="json-output"
+          rows="16"
+          readonly
+          placeholder="Fill out the form above to generate course metadata."
+        ></textarea>
+        <p id="builder-status" class="field-help" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script src="course-builder.js" type="module"></script>
+  </body>
+</html>

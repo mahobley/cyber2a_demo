@@ -1,0 +1,21 @@
+{
+  "id": "era5-reanalysis-subset",
+  "name": "ERA5 Reanalysis Subset",
+  "url": "https://example.com/datasets/era5-reanalysis",
+  "domain": "Atmospheric Dynamics",
+  "methods": [
+    "Temporal Forecasting",
+    "Spatial Interpolation"
+  ],
+  "size": "Hourly fields (2000-2020) | 12 GB",
+  "citation": "European Centre for Medium-Range Weather Forecasts (2023). ERA5 Reanalysis Subset.",
+  "sizeCategory": "Large",
+  "dataTypes": [
+    "Gridded Time Series",
+    "NetCDF"
+  ],
+  "topics": [
+    "Climate Modeling",
+    "Reanalysis Data"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lab-02",
+  "title": "Lab 2: Transfer-Learning Experiments",
+  "description": "Fine-tune multiple pre-trained segmentation backbones on EuroSAT, track metrics in Weights & Biases, and compare to the baseline model.",
+  "styles": ["Lab", "Code Lab"],
+  "audience": ["Graduate Students", "Machine Learning Practitioners"],
+  "length": "Lab",
+  "link": "https://example.com/joachim/eurosat-lab-02",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lesson-02",
+    "next": "joachim-satellite-lesson-03"
+  },
+  "taughtCount": 1,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "Transfer Learning for Semantic Segmentation",
+    "link": "https://keras.io/examples/vision/semantic_segmentation/",
+    "author": "Keras Team"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

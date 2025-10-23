@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lesson-07",
+  "title": "Deploying Segmentation Models at the Edge",
+  "description": "Discuss optimization, quantization, and packaging strategies to run EuroSAT models on edge hardware.",
+  "styles": ["Lecture", "Demo"],
+  "audience": ["Graduate Students", "Engineers"],
+  "length": "Module",
+  "link": "https://example.com/joachim/eurosat-edge",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lab-06",
+    "next": "joachim-satellite-lab-07"
+  },
+  "taughtCount": 0,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "TensorFlow Lite Model Optimization",
+    "link": "https://www.tensorflow.org/lite/performance/post_training_quantization",
+    "author": "TensorFlow Lite Team"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lesson-10",
+  "title": "Scaling Training with Distributed Compute",
+  "description": "Cover multi-GPU and multi-node training strategies for EuroSAT segmentation workloads using Keras and TensorFlow.",
+  "styles": ["Lecture", "Demo"],
+  "audience": ["Graduate Students", "Engineers"],
+  "length": "Module",
+  "link": "https://example.com/joachim/eurosat-distributed",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lab-09",
+    "next": "joachim-satellite-lab-10"
+  },
+  "taughtCount": 0,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "Distributed Training with TensorFlow",
+    "link": "https://www.tensorflow.org/guide/distributed_training",
+    "author": "TensorFlow Team"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

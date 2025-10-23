@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lab-03",
+  "title": "Lab 3: Explainability Dashboards",
+  "description": "Build interactive notebooks with saliency and SHAP visualizations to explain EuroSAT segmentation outputs, surfacing error hotspots.",
+  "styles": ["Lab", "Project"],
+  "audience": ["Graduate Students", "Machine Learning Practitioners"],
+  "length": "Lab",
+  "link": "https://example.com/joachim/eurosat-lab-03",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lesson-03",
+    "next": "joachim-satellite-lesson-04"
+  },
+  "taughtCount": 1,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "Explaining Pixel-wise Predictions",
+    "link": "https://distill.pub/2020/attribution-baselines/",
+    "author": "Distill"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

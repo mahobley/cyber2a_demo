@@ -1,0 +1,21 @@
+{
+  "id": "global-carbon-flux-inventory",
+  "name": "Global Carbon Flux Inventory",
+  "url": "https://example.com/datasets/carbon-flux",
+  "domain": "Biogeochemical Cycles",
+  "methods": [
+    "Regression Modeling",
+    "Uncertainty Quantification"
+  ],
+  "size": "Annual flux estimates (1990-2022) | 2.4 GB",
+  "citation": "Singh, A. (2024). Global Carbon Flux Inventory v3. Center for Earth System Science.",
+  "sizeCategory": "Medium",
+  "dataTypes": [
+    "Tabular Aggregates",
+    "Raster Grids"
+  ],
+  "topics": [
+    "Carbon Cycle",
+    "Climate Forcing"
+  ]
+}

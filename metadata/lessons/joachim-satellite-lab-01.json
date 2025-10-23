@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lab-01",
+  "title": "Lab 1: Dataset Profiling and Baseline Notebook",
+  "description": "Hands-on lab to explore EuroSAT tiles, compute band statistics, and establish a reproducible baseline segmentation notebook in Keras.",
+  "styles": ["Lab", "Hands-on"],
+  "audience": ["Graduate Students", "Machine Learning Practitioners"],
+  "length": "Lab",
+  "link": "https://example.com/joachim/eurosat-lab-01",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lesson-01",
+    "next": "joachim-satellite-lesson-02"
+  },
+  "taughtCount": 2,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "EuroSAT Baseline Walkthrough",
+    "link": "https://github.com/phelber/EuroSAT",
+    "author": "EuroSAT Contributors"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

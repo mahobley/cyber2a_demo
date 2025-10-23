@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lesson-06",
+  "title": "Temporal Change Detection Strategies",
+  "description": "Incorporate temporal stacks and change maps to capture evolving land use patterns in EuroSAT regions.",
+  "styles": ["Lecture", "Research Talk"],
+  "audience": ["Graduate Students", "Researchers"],
+  "length": "Module",
+  "link": "https://example.com/joachim/eurosat-temporal",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lab-05",
+    "next": "joachim-satellite-lab-06"
+  },
+  "taughtCount": 0,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "Change Detection in Remote Sensing",
+    "link": "https://ieeexplore.ieee.org/document/9356350",
+    "author": "IEEE Remote Sensing"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

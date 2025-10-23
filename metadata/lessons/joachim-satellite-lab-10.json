@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lab-10",
+  "title": "Lab 10: Multi-GPU Training Clinic",
+  "description": "Run distributed training sessions on EuroSAT with mirrored strategy, profiling throughput and scaling efficiency.",
+  "styles": ["Lab", "Performance"],
+  "audience": ["Graduate Students", "Engineers"],
+  "length": "Lab",
+  "link": "https://example.com/joachim/eurosat-lab-10",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lesson-10",
+    "next": "joachim-satellite-lesson-11"
+  },
+  "taughtCount": 0,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "TensorFlow Profiler",
+    "link": "https://www.tensorflow.org/tensorboard/tensorboard_profiling_keras",
+    "author": "TensorFlow Team"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

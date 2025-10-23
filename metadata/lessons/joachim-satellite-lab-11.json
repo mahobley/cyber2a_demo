@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lab-11",
+  "title": "Lab 11: Cross-Dataset Fine-Tuning",
+  "description": "Fine-tune EuroSAT models with mixed DeepGlobe and Dubai tiles, tracking transfer gains and failure cases.",
+  "styles": ["Lab", "Experiment"],
+  "audience": ["Graduate Students", "Researchers"],
+  "length": "Lab",
+  "link": "https://example.com/joachim/eurosat-lab-11",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lesson-11",
+    "next": "joachim-satellite-lesson-12"
+  },
+  "taughtCount": 0,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "DeepGlobe Transfer Learning",
+    "link": "https://github.com/chrieke/awesome-satellite-imagery-datasets",
+    "author": "Satellite Imagery Community"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

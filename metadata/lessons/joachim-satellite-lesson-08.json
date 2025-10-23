@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lesson-08",
+  "title": "Active Learning for Label Efficiency",
+  "description": "Evaluate pool-based and region-growing active learning strategies to prioritize EuroSAT labeling budgets.",
+  "styles": ["Lecture", "Workshop"],
+  "audience": ["Graduate Students", "Labeling Leads"],
+  "length": "Module",
+  "link": "https://example.com/joachim/eurosat-active-learning",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lab-07",
+    "next": "joachim-satellite-lab-08"
+  },
+  "taughtCount": 0,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "Active Learning for Semantic Segmentation",
+    "link": "https://arxiv.org/abs/2006.02667",
+    "author": "CasActive"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

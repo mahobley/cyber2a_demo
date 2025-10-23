@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lab-05",
+  "title": "Lab 5: Band Selection Experiments",
+  "description": "Evaluate different band combinations and feature stacks for EuroSAT segmentation accuracy and latency trade-offs.",
+  "styles": ["Lab", "Analysis"],
+  "audience": ["Graduate Students", "Remote Sensing Analysts"],
+  "length": "Lab",
+  "link": "https://example.com/joachim/eurosat-lab-05",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lesson-05",
+    "next": "joachim-satellite-lesson-06"
+  },
+  "taughtCount": 0,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "EuroSAT Feature Engineering",
+    "link": "https://example.com/eurosat-feature-lab",
+    "author": "EuroSAT Study Group"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

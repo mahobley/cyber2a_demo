@@ -1,0 +1,38 @@
+{
+  "id": "sat-keras-eurosat-advanced",
+  "title": "Advanced Satellite Image Classification and Segmentation with Keras and EuroSAT",
+  "summary": "<p>A 24-session track pairing twelve deep-dive lectures with twelve labs to extend the core EuroSAT curriculum.</p><ul><li>Prototype advanced augmentation, transfer learning, and temporal modeling techniques.</li><li>Harden segmentation workflows for deployment, monitoring, and stakeholder delivery.</li><li>Blend EuroSAT with companion datasets to test generalization.</li><li>Produce production-ready assets through iterative lab sprints.</li></ul>",
+  "coordinators": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University",
+      "role": "Lead Curator"
+    }
+  ],
+  "lessonIds": [
+    "joachim-satellite-lesson-01",
+    "joachim-satellite-lab-01",
+    "joachim-satellite-lesson-02",
+    "joachim-satellite-lab-02",
+    "joachim-satellite-lesson-03",
+    "joachim-satellite-lab-03",
+    "joachim-satellite-lesson-04",
+    "joachim-satellite-lab-04",
+    "joachim-satellite-lesson-05",
+    "joachim-satellite-lab-05",
+    "joachim-satellite-lesson-06",
+    "joachim-satellite-lab-06",
+    "joachim-satellite-lesson-07",
+    "joachim-satellite-lab-07",
+    "joachim-satellite-lesson-08",
+    "joachim-satellite-lab-08",
+    "joachim-satellite-lesson-09",
+    "joachim-satellite-lab-09",
+    "joachim-satellite-lesson-10",
+    "joachim-satellite-lab-10",
+    "joachim-satellite-lesson-11",
+    "joachim-satellite-lab-11",
+    "joachim-satellite-lesson-12",
+    "joachim-satellite-lab-12"
+  ]
+}

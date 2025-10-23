@@ -1,0 +1,28 @@
+{
+  "id": "joachim-satellite-lesson-12",
+  "title": "Capstone Presentations and Synthesis",
+  "description": "Summarize findings across labs, articulate design decisions, and prepare stakeholders for production rollout.",
+  "styles": ["Seminar", "Presentation"],
+  "audience": ["Graduate Students", "Stakeholders"],
+  "length": "Module",
+  "link": "https://example.com/joachim/eurosat-capstone",
+  "authors": [
+    {
+      "name": "Dr. Joachim Moortgat",
+      "institution": "The Ohio State University"
+    }
+  ],
+  "courseId": "sat-keras-eurosat-advanced",
+  "navigation": {
+    "previous": "joachim-satellite-lab-11",
+    "next": "joachim-satellite-lab-12"
+  },
+  "taughtCount": 0,
+  "modifiedBy": [],
+  "adaptedFrom": {
+    "title": "Communicating ML Results",
+    "link": "https://distill.pub/2019/communicating/",
+    "author": "Distill"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

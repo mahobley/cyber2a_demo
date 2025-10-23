@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2025-10-23T20:06:37Z",
+  "lessonCount": 26,
+  "datasetCount": 1,
+  "courseCount": 2,
+  "lessons": [
+    "satellite-lesson-01",
+    "satellite-lesson-02",
+    "joachim-satellite-lesson-01",
+    "joachim-satellite-lab-01",
+    "joachim-satellite-lesson-02",
+    "joachim-satellite-lab-02",
+    "joachim-satellite-lesson-03",
+    "joachim-satellite-lab-03",
+    "joachim-satellite-lesson-04",
+    "joachim-satellite-lab-04",
+    "joachim-satellite-lesson-05",
+    "joachim-satellite-lab-05",
+    "joachim-satellite-lesson-06",
+    "joachim-satellite-lab-06",
+    "joachim-satellite-lesson-07",
+    "joachim-satellite-lab-07",
+    "joachim-satellite-lesson-08",
+    "joachim-satellite-lab-08",
+    "joachim-satellite-lesson-09",
+    "joachim-satellite-lab-09",
+    "joachim-satellite-lesson-10",
+    "joachim-satellite-lab-10",
+    "joachim-satellite-lesson-11",
+    "joachim-satellite-lab-11",
+    "joachim-satellite-lesson-12",
+    "joachim-satellite-lab-12"
+  ],
+  "datasets": [
+    "eurosat-sentinel2"
+  ],
+  "courses": [
+    "sat-keras-eurosat",
+    "sat-keras-eurosat-advanced"
+  ]
+}

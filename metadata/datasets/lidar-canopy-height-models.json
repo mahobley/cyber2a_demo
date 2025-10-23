@@ -1,0 +1,21 @@
+{
+  "id": "lidar-canopy-height-models",
+  "name": "LiDAR Canopy Height Models",
+  "url": "https://example.com/datasets/lidar-canopy",
+  "domain": "Forest Structure",
+  "methods": [
+    "3D Reconstruction",
+    "Feature Engineering"
+  ],
+  "size": "Regional tiles (1m resolution) | 9 GB",
+  "citation": "Ortega, L. (2023). Coastal Canopy LiDAR Products. Coastal Climate Laboratory.",
+  "sizeCategory": "Medium",
+  "dataTypes": [
+    "Point Clouds",
+    "Raster Grids"
+  ],
+  "topics": [
+    "Forest Biomass",
+    "Habitat Monitoring"
+  ]
+}

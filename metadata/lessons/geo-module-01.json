@@ -1,0 +1,39 @@
+{
+  "id": "geo-module-01",
+  "title": "Climate Model Calibration Intensive",
+  "description": "Guide students through bias correction and parameter tuning for coupled climate models using real-world reanalysis products.",
+  "styles": [
+    "Active Learning",
+    "Lab"
+  ],
+  "audience": [
+    "Graduate Students"
+  ],
+  "length": "Module",
+  "link": "https://example.com/climate-model-calibration",
+  "authors": [
+    {
+      "name": "Dr. Amara Singh",
+      "institution": "Center for Earth System Science"
+    },
+    {
+      "name": "Prof. Liam Ortega",
+      "institution": "Coastal Climate Laboratory"
+    }
+  ],
+  "courseId": "earth-systems-analytics-2024",
+  "navigation": {
+    "previous": null,
+    "next": "geo-module-02"
+  },
+  "taughtCount": 7,
+  "adaptedFrom": {
+    "title": "GEO 510 Climate Model Calibration Workshop",
+    "link": "https://example.com/original/climate-calibration",
+    "author": "Global Climate Teaching Collective"
+  },
+  "datasetIds": [
+    "era5-reanalysis-subset",
+    "global-carbon-flux-inventory"
+  ]
+}

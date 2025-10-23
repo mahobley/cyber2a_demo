@@ -1,0 +1,35 @@
+{
+  "id": "satellite-lesson-01",
+  "title": "Image Classification and Segmentation Concepts",
+  "description": "Introduction to the fundamental concepts of image classification and segmentation using the EuroSAT dataset. Students explore how pixel-wise prediction differs from classification, examine key segmentation architectures like U-Net and SegNet, and apply these ideas to aerial imagery such as the Dubai Segmentation dataset.",
+  "styles": ["Lesson", "Example-Code"],
+  "audience": ["Graduate Students", "Undergraduate Students", "Machine Learning Practitioners"],
+  "length": "Module",
+  "link": "https://www.kaggle.com/code/nilesh789/land-cover-classification-with-eurosat-dataset#III.-Machine-Learning-for-Image-Classification",
+  "authors": [
+    {
+      "name": "Dr. Sofia Rahman",
+      "institution": "Geospatial Data Science Lab"
+    }
+  ],
+  "courseId": "sat-keras-eurosat",
+  "navigation": {
+    "previous": null,
+    "next": "satellite-lesson-02"
+  },
+  "taughtCount": 4,
+  "modifiedBy": [
+    {
+      "title": "Aerial Segmentation of Dubai Dataset",
+      "curator": "Dr. Adrian Cheng",
+      "institution": "Open Remote Sensing Consortium",
+      "link": "https://www.kaggle.com/datasets/humansintheloop/semantic-segmentation-of-aerial-imagery"
+    }
+  ],
+  "adaptedFrom": {
+    "title": "Land Cover Classification with EuroSAT Dataset",
+    "link": "https://www.kaggle.com/code/rkuo2000/eurosat-cnn/notebook#Test-Model",
+    "author": "Kaggle Community Contributors"
+  },
+  "datasetIds": ["eurosat-sentinel2"]
+}

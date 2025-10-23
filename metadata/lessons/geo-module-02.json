@@ -1,0 +1,44 @@
+{
+  "id": "geo-module-02",
+  "title": "Satellite Remote Sensing Field Lab",
+  "description": "Hands-on experience with multispectral imagery, surface reflectance correction, and vegetation index derivation.",
+  "styles": [
+    "Lab"
+  ],
+  "audience": [
+    "Graduate Students",
+    "Undergraduate Students"
+  ],
+  "length": "Lesson",
+  "link": "https://example.com/satellite-remote-sensing-lab",
+  "authors": [
+    {
+      "name": "Dr. Amara Singh",
+      "institution": "Center for Earth System Science"
+    }
+  ],
+  "courseId": "earth-systems-analytics-2024",
+  "navigation": {
+    "previous": "geo-module-01",
+    "next": "geo-module-03"
+  },
+  "taughtCount": 5,
+  "modifiedBy": [
+    {
+      "title": "Tropical Remote Sensing Studio",
+      "curator": "Dr. Mei Chen",
+      "institution": "Pacific Earth Observatory",
+      "link": "https://example.com/lessons/tropical-remote-sensing"
+    },
+    {
+      "title": "Urban Heat Island Remote Sensing Lab",
+      "curator": "Prof. Javier Morales",
+      "institution": "Metropolitan Climate Institute",
+      "link": "https://example.com/lessons/urban-heat-lab"
+    }
+  ],
+  "datasetIds": [
+    "sentinel2-surface-reflectance",
+    "lidar-canopy-height-models"
+  ]
+}
